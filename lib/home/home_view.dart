@@ -1,8 +1,8 @@
-import 'package:basic_widgets/home/widget/appbar/home_appbar.dart';
-import 'package:basic_widgets/home/widget/images/home_asset_image.dart';
-import 'package:basic_widgets/home/widget/buttons/home_elevated_button.dart';
-import 'package:basic_widgets/home/widget/images/home_network_image.dart';
-import 'package:basic_widgets/home/widget/buttons/home_outlined_button.dart';
+import 'package:basic_widgets/home/widget/stateless/appbar/home_appbar.dart';
+import 'package:basic_widgets/home/widget/stateless/images/home_asset_image.dart';
+import 'package:basic_widgets/home/widget/stateless/buttons/home_elevated_button.dart';
+import 'package:basic_widgets/home/widget/stateless/images/home_network_image.dart';
+import 'package:basic_widgets/home/widget/stateless/buttons/home_outlined_button.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
