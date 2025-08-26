@@ -1,3 +1,3 @@
 # basic_widgets
 
-A new Flutter project.
+Showcase flutter stateless and stateful widgets
