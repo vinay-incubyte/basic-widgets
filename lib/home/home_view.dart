@@ -1,10 +1,12 @@
+import 'package:basic_widgets/core/toast_helper.dart';
+import 'package:basic_widgets/home/widget/stateful/checkbox/home_checkbox.dart';
+import 'package:basic_widgets/home/widget/stateful/switch_box/home_switch.dart';
 import 'package:basic_widgets/home/widget/stateless/appbar/home_appbar.dart';
 import 'package:basic_widgets/home/widget/stateless/images/home_asset_image.dart';
 import 'package:basic_widgets/home/widget/stateless/buttons/home_elevated_button.dart';
 import 'package:basic_widgets/home/widget/stateless/images/home_network_image.dart';
 import 'package:basic_widgets/home/widget/stateless/buttons/home_outlined_button.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -13,16 +15,20 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: HomeAppbar(),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          spacing: 20,
-          children: [
-            buildTitle(),
-            HomeAssetImage(),
-            HomeNetworkImage(),
-            buildButtons(),
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            spacing: 20,
+            children: [
+              buildTitle(),
+              HomeAssetImage(),
+              HomeNetworkImage(),
+              buildButtons(),
+              HomeCheckbox(),
+              HomeSwitch(),
+            ],
+          ),
         ),
       ),
     );
@@ -48,7 +54,7 @@ class HomeView extends StatelessWidget {
         ),
         TextButton(
           onPressed: () {
-            Fluttertoast.showToast(msg: "Text buton");
+            ToastHelper.showToast(msg: "Text buton");
           },
           child: Text("Forgot password?"),
         ),
