@@ -1,4 +1,4 @@
-import 'package:basic_widgets/src/home_view.dart';
+import 'package:basic_widgets/home/home_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
