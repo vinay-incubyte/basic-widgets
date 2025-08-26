@@ -1,5 +1,6 @@
 import 'package:basic_widgets/home/appbar/home_appbar.dart';
 import 'package:basic_widgets/home/appbar/home_elevated_button.dart';
+import 'package:basic_widgets/home/appbar/home_outlined_button.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
@@ -12,22 +13,36 @@ class HomeView extends StatelessWidget {
       appBar: HomeAppbar(),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Column(
-          spacing: 20,
-          children: [
-            Text(
-              "Welcome! to Home Screen",
-              style: TextStyle(
-                fontSize: 24,
-                color: Colors.blue,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-
-            HomeElevatedButton(),
-          ],
-        ),
+        child: Column(spacing: 20, children: [buildTitle(), buildButtons()]),
       ),
+    );
+  }
+
+  Text buildTitle() {
+    return Text(
+      "Welcome! to Home Screen",
+      style: TextStyle(
+        fontSize: 24,
+        color: Colors.blue,
+        fontWeight: FontWeight.w500,
+      ),
+    );
+  }
+
+  Widget buildButtons() {
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [HomeElevatedButton(), HomeOutlinedButton()],
+        ),
+        TextButton(
+          onPressed: () {
+            Fluttertoast.showToast(msg: "Text buton");
+          },
+          child: Text("Forgot password?"),
+        ),
+      ],
     );
   }
 }

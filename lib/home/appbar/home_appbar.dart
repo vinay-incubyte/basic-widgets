@@ -1,5 +1,5 @@
+import 'package:basic_widgets/core/toast_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 
 class HomeAppbar extends StatelessWidget implements PreferredSizeWidget {
   const HomeAppbar({super.key});
@@ -11,7 +11,7 @@ class HomeAppbar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         IconButton(
           onPressed: () {
-            Fluttertoast.showToast(msg: "Settings tapped");
+            ToastHelper.showToast(msg: "Icon button");
           },
           icon: Icon(Icons.settings, color: Colors.blueAccent),
         ),
